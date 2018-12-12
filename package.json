@@ -1,0 +1,11 @@
+{
+  "name": "Local_Building",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:Jack-cool/Local_Building.git",
+  "author": "fengshuan <1263215592@qq.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "gulp": "^4.0.0"
+  }
+}
