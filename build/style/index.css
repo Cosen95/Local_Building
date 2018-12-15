@@ -1,1 +1,14 @@
-.box{color:#fe33ac;border-color:#fdcdea}.box div{-webkit-box-shadow:0 0 5px rgba(0,0,0,.3);box-shadow:0 0 5px rgba(0,0,0,.3)}.content{width:600px;height:50px;margin:30px auto;border-radius:20px;-webkit-transform:translateY(20px);transform:translateY(20px)}
+.container {
+  margin: 30px auto;
+  width: 600px;
+}
+.box {
+  padding: 20px;
+  font-size: 24px;
+  background: orange;
+  color: #999;
+  cursor: pointer;
+}
+.box:hover {
+  color: brown;
+}

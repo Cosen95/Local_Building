@@ -6,19 +6,27 @@
   "author": "fengshuan <1263215592@qq.com>",
   "license": "MIT",
   "scripts": {
-    "babel": "babel src/script -d build/script"
+    "babel": "babel src/script -d build/script",
+    "webpack": "webpack"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
+    "babel-loader": "7",
     "babel-plugin-transform-object-assign": "^6.22.0",
     "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.24.1",
+    "css-loader": "^2.0.1",
     "del": "^3.0.0",
+    "extract-text-webpack-plugin": "^4.0.0-beta.0",
     "gulp": "^4.0.0",
     "gulp-autoprefixer": "^6.0.0",
     "gulp-clean-css": "^4.0.0",
     "gulp-less": "^4.0.1",
+    "less-loader": "^4.1.0",
     "react": "^16.6.3",
-    "react-dom": "^16.6.3"
+    "react-dom": "^16.6.3",
+    "style-loader": "^0.23.1",
+    "webpack": "^4.27.1",
+    "webpack-cli": "^3.1.2"
   }
 }

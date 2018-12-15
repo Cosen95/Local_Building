@@ -1,20 +1,8 @@
-@base: #f938ab;
+@width: 600px;
 
-.box-shadow(@style, @c) when (iscolor(@c)) {
-  box-shadow: @style @c;
+.container {
+  margin: 30px auto;
+  width: @width;
 }
-.box-shadow(@style, @alpha: 50%) when (isnumber(@alpha)) {
-  .box-shadow(@style, rgba(0, 0, 0, @alpha));
-}
-.box {
-  color: saturate(@base, 5%);
-  border-color: lighten(@base, 30%);
-  div { .box-shadow(0 0 5px, 30%) }
-}
-.content {
-    width: 600px;
-    height: 50px;
-    margin: 30px auto;
-    border-radius: 20px;
-    transform: translateY(20px);
-}
+
+@import './common/index.less';
