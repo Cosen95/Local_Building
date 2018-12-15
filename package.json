@@ -5,11 +5,20 @@
   "repository": "git@github.com:Jack-cool/Local_Building.git",
   "author": "fengshuan <1263215592@qq.com>",
   "license": "MIT",
+  "scripts": {
+    "babel": "babel src/script -d build/script"
+  },
   "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-plugin-transform-object-assign": "^6.22.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
     "del": "^3.0.0",
     "gulp": "^4.0.0",
     "gulp-autoprefixer": "^6.0.0",
     "gulp-clean-css": "^4.0.0",
-    "gulp-less": "^4.0.1"
+    "gulp-less": "^4.0.1",
+    "react": "^16.6.3",
+    "react-dom": "^16.6.3"
   }
 }
