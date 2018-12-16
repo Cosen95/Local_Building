@@ -16,6 +16,10 @@ module.exports = {
         path: path.resolve(__dirname, 'build/script'),
         filename: '[name].js'
     },
+    mode: 'production',
+    // optimization: {
+    //     usedExports: true
+    // },
     module: {
         rules: [
             {
