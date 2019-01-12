@@ -192,3 +192,37 @@ gulp.task('message', function() {
 
 ```
 
+### babel
+Babel 通过语法转换器支持最新版本的 JavaScript 
+1.安装babel
+`yarn add babel-cli babel-preset-env`
+2.创建.babelrc文件
+```
+{
+  "presets": ["env"]
+}
+
+```
+
+#### Polyfill
+由于 Babel 只转换语法(如箭头函数)， 你可以使用 babel-polyfill 支持新的全局变量，例如 Promise 、新的原生方法如 String.padStart (left-pad) 等。
+1.安装
+`yarn add babel-polyfill`
+2.使用它时需要在你应用程序的入口点顶部或打包配置中引入。
+
+#### JSX
+Babel 能够转换 JSX 语法并去除类型注释。
+1.安装
+`yarn add babel-preset-react`
+2.添加 "react" 到你的 .babelrc 的 presets 数组中。
+```
+{
+  "presets": ["env","react"]
+}
+
+```
+#### Source map
+支持 Source map 因此可以轻松调试编译后代码。
+
+#### babel-plugin-transform
+针对不在babel-preset-env中的，babel提供了babel-plugin-transform来支持相应的方法，如`babel-plugin-transform-object-assign`、`babel-plugin-transform-object-rest-spread`
