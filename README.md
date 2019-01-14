@@ -7,8 +7,10 @@
 ### gulp
 1.全局安装gulp
 `yarn global add gulp`
+
 2.作为项目的开发依赖（devDependencies）安装
 `yarn add gulp --dev`
+
 3.在项目根目录下创建一个名为 gulpfile.js 的文件：
 ```
 var gulp = require('gulp');
@@ -18,6 +20,7 @@ gulp.task('default', function() {
 });
 
 ```
+
 4.运行gulp
 `$ gulp`
 
@@ -34,8 +37,10 @@ gulp.task('default', function() {
 #### gulp 插件
 * `gulp-less`
 将less文件编译成CSS。
+
 1.安装
 `yarn add gulp-less`
+
 2.基本使用
 ```
 var less = require('gulp-less');
@@ -52,8 +57,10 @@ gulp.task('less', function () {
 ```
 * `gulp-autoprefixer`
 根据设置浏览器版本自动处理浏览器前缀。使用它我们可以不必考虑各浏览器兼容前缀，在写完后再自动处理。
+
 1.安装
 `yarn add gulp-autoprefixer`
+
 2.基本使用
 ```
 const gulp = require('gulp');
@@ -71,8 +78,10 @@ gulp.task('default', () =>
 ```
 * `del`
 你也许会想要在编译文件之前删除一些旧文件。由于删除文件和文件内容并没有太大关系，所以，我们没必要去使用一个 gulp 插件。最好是选择使用一个原生的 node 模块，因为 del 模块支持多个文件以及模式匹配，因此，我们将使用它来删除文件。
+
 1.安装
 `yarn add del`
+
 2.基本使用
 ```
 gulp.task('clean', (done) => {
@@ -83,8 +92,10 @@ gulp.task('clean', (done) => {
 ```
 * `gulp-clean-css`
 使用gulp-clean-css压缩css文件，减小文件大小，并给引用url添加版本号避免缓存。（之前的有同样功能的gulp-minify-css已被废弃）
+
 1.安装
 `yarn add gulp-clean-css`
+
 2.基本使用
 ```
 let gulp = require('gulp');
@@ -173,6 +184,7 @@ AssertionError: Task never defined: serve
 gulp4中，必须告诉gulp我们的task任务已经完成了。gulp3中，我们不必要这么做，因为如果没有发出异步完成信号，那么当任务返回时，gulp会认为它已经完成了，gulp4中必须明确指出任务完成了。
 
 解决方法：使依赖任务在文件的底部。
+
 1.使用回调函数作为您的任务的第一个参数，只需在完成时调用该函数。
 ```
 gulp.task('clean', function(done) {
@@ -181,6 +193,7 @@ gulp.task('clean', function(done) {
 });
 
 ```
+
 2.告诉gulp任务完成的另一个常见方法是 返回(return) 一个流或者** Promise**：
 ```
 gulp.task('message', function() {
@@ -194,8 +207,10 @@ gulp.task('message', function() {
 
 ### babel
 Babel 通过语法转换器支持最新版本的 JavaScript 
+
 1.安装babel
 `yarn add babel-cli babel-preset-env`
+
 2.创建.babelrc文件
 ```
 {
@@ -206,14 +221,18 @@ Babel 通过语法转换器支持最新版本的 JavaScript
 
 #### Polyfill
 由于 Babel 只转换语法(如箭头函数)， 你可以使用 babel-polyfill 支持新的全局变量，例如 Promise 、新的原生方法如 String.padStart (left-pad) 等。
+
 1.安装
 `yarn add babel-polyfill`
+
 2.使用它时需要在你应用程序的入口点顶部或打包配置中引入。
 
 #### JSX
 Babel 能够转换 JSX 语法并去除类型注释。
+
 1.安装
 `yarn add babel-preset-react`
+
 2.添加 "react" 到你的 .babelrc 的 presets 数组中。
 ```
 {
